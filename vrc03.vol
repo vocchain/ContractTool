@@ -1,0 +1,27 @@
+pragma vscl ^0.4.21;
+
+
+contract TokenVRC03 {
+    string public name;
+    string public symbol;
+    uint public decimals = 18; 
+    uint public totalSupply;
+    mapping (address => uint) public balances;
+
+    event Sent(address from, address to, uint amount);
+
+    function TokenVRC03(uint initialSupply, string tokenName, string tokenSymbol,uint decimal){
+          decimals=decimal;
+        totalSupply = initialSupply * 10 ** uint(decimals);
+        balances[msg.sender] = totalSupply;
+        name = tokenName;
+        symbol = tokenSymbol;
+    }
+    
+ function transfer(address receiver, uint amount) public {
+        if (balances[msg.sender] < amount) return ;
+        balances[msg.sender] -= amount;
+        balances[receiver] += amount;
+        emit Sent(msg.sender, receiver, amount);
+    }
+}
