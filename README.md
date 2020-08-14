@@ -12,13 +12,13 @@ Vscl 是静态类型语言，支持继承、库和复杂的用户定义类型等
 
 插件下载链接：
 
-![image-20200730173742411](D:\文档\文档\markdown\区块链\VOC\Untitled.assets\image-20200730173742411.png)
+![vscl](https://github.com/vocchain/ContractTool/blob/master/vscl.png)
 
 
 
 2.合约编辑
 
-![image-20200730173952218](D:\文档\文档\markdown\区块链\VOC\Untitled.assets\image-20200730173952218.png)
+![example](https://github.com/vocchain/ContractTool/blob/master/example.png)
 
 示例代码：
 
